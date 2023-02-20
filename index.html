@@ -2,12 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Martian+Mono:wght@700&family=Montserrat:wght@400;500&family=Padyakke+Expanded+One&family=Poppins:wght@100&family=Roboto+Mono:wght@200&family=Roboto:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://kit.fontawesome.com/32d57d428b.css" crossorigin="anonymous">
   </head>
+
   <body>
-    <script src="app.js"></script>
+      <h1> Annes Weather App</h1>
+    <div class="container">
+      <div class="weather-app">
+      </br>
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-5">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            
+          </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+          </div>
+           <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+        
+        </form>
+      </br>
+      </br>
+      <h2 id="city"></h1>
+      <ul>
+          <li id="date"></li>
+          <li id="description">
+            
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+             
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info">
+            <ul>
+              
+              <li class="humi">
+                Humidity : <span id="humidity"></span> %
+              </li>
+              <li class="wind">
+               Wind : <span id="wind"></span> km/h
+              </li>
+            </ul>
+          </br>
+          
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/javascript.js"></script>
   </body>
+</html>
+
+        
+
+   
+    <script src="https://kit.fontawesome.com/32d57d428b.js" crossorigin="anonymous"></script>
+  
 </html>
